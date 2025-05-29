@@ -226,6 +226,13 @@ body {
   .menu-toggle {
     display: block;
   }
+  
+  .logo {
+	  font-size: 1.5rem;
+	  white-space: nowrap;       /* Prevent breaks */
+	  overflow: hidden;          /* Optional safety */
+	  
+  }
 
   .hero-title {
     font-size: 1.5rem;
