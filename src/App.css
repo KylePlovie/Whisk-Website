@@ -13,7 +13,6 @@
   box-sizing: border-box;
 }
 
-/* ---------- New Top Bar Layout ---------- */
 .top-bar {
   position: fixed;
   top: 0;
@@ -26,10 +25,11 @@
 
 .top-bar-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-start;
+  gap:  8rem;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 1rem;
 }
 
@@ -40,7 +40,6 @@
   font-family: 'Brush Script MT', cursive;
 }
 
-/* Desktop Navigation */
 .desktop-nav {
   display: none;
 }
@@ -62,16 +61,15 @@
   color: #A98A46;
 }
 
-/* Hamburger Toggle (Mobile Only) */
 .menu-toggle {
   background: none;
   border: none;
   cursor: pointer;
   color: #CDB87F;
   display: block;
+  margin-left: auto;
 }
 
-/* Fullscreen Mobile Nav Overlay */
 .full-nav {
   position: fixed;
   top: 0;
@@ -101,13 +99,12 @@
   font-weight: bold;
 }
 
-/* ---------- Hero Section ---------- */
 .hero-section {
   position: relative;
   width: 100vw;
   height: 60vh;
   overflow: hidden;
-  margin-top: 0rem; /* offset for fixed header */
+  margin-top: 0rem;
 }
 
 .hero-image {
@@ -138,7 +135,6 @@
   margin-bottom: 1rem;
 }
 
-/* ---------- Story Section ---------- */
 .story-section {
   background-color: #c2d7db;
   padding: 3rem 2rem;
@@ -191,7 +187,6 @@
   color: #333;
 }
 
-/* Optional CTA Button */
 .cta-button {
   margin-top: 2rem;
   padding: 0.75rem 2rem;
@@ -207,7 +202,6 @@
   background-color: #a98a46;
 }
 
-/* ---------- Page Defaults ---------- */
 body {
   margin: 0;
   padding: 0;
@@ -224,12 +218,11 @@ body {
   text-align: center;
 }
 
-/* ---------- Media Queries ---------- */
 @media (max-width: 768px) {
   .desktop-nav {
     display: none;
   }
-
+  
   .menu-toggle {
     display: block;
   }
@@ -260,6 +253,23 @@ body {
 @media (min-width: 769px) {
   .desktop-nav {
     display: block;
+  }
+
+  .desktop-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .desktop-nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .desktop-nav a:hover {
+    color: #A98A46;
   }
 
   .menu-toggle {

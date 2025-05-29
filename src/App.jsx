@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi';
 import HeroImage from './assets/HeroImage1.jpg';
-import StephanieImage from './assets/stephanie.jpg'; // optional image for story
+import StephanieImage from './assets/stephanie.jpg'; 
 import './App.css'
 
 function App() {
@@ -9,14 +9,10 @@ function App() {
 
   return (
     <div>
-      {/* Favicon link - for <head>, not JSX body */}
-      {/* <link rel="icon" type="image/png" href="/vite.svg" /> */}
-
       {/* Top Bar */}
       <header className="top-bar">
         <div className="top-bar-inner">
           <div className="logo">Dream and a Whisk</div>
-
           {/* Desktop Navigation */}
           <nav className="desktop-nav">
             <ul>
@@ -26,7 +22,6 @@ function App() {
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
-
           {/* Mobile Hamburger */}
           <button
             className="menu-toggle"
@@ -37,7 +32,6 @@ function App() {
           </button>
         </div>
       </header>
-
       {/* Fullscreen Mobile Nav */}
       {menuOpen && (
         <div className="full-nav">
@@ -49,7 +43,6 @@ function App() {
           </ul>
         </div>
       )}
-
       {/* Hero Section */}
       <div className="hero-section" id="home">
         <img src={HeroImage} alt="Bakery entrance" className="hero-image" />
@@ -58,7 +51,6 @@ function App() {
           <p className="hero-subtitle">Welcome to Dream and a Whisk</p>
         </div>
       </div>
-
       {/* Story Section */}
       <div className="story-section">
         <div className="story-grid">
