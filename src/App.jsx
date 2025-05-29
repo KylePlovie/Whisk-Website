@@ -48,7 +48,7 @@ function App() {
         <img src={HeroImage} alt="Bakery entrance" className="hero-image" />
         <div className="hero-overlay">
           <h1 className="hero-title">PRESENTATION IS EVERYTHING</h1>
-          <p className="hero-subtitle">Welcome to Dream and a Whisk</p>
+          <p className="hero-subtitle">Welcome to Dream and a Whisk bakery</p>
         </div>
       </div>
       {/* Story Section */}

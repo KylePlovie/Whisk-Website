@@ -40,6 +40,7 @@
   color: #CDB87F;
   line-height: 1.2;
   white-space: nowrap;
+  overflow: visible;
 }
 
 .desktop-nav {
