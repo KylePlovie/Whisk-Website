@@ -235,9 +235,18 @@ body {
   .logo {
 	  font-size: clamp(1.5rem, 5vw, 2.5rem);
 	  white-space: nowrap;       /* Prevent breaks */
-	  overflow: hidden;          /* Optional safety */
-	  
+	  overflow: visible;              /* ✅ Prevent layout crunching on small screens */
+      flex-wrap: nowrap;	  /* Optional safety */  
   }
+  
+  .top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;              /* <-- was 8rem, too large for mobile */
+  flex-wrap: nowrap;
+  overflow: visible;
+}
 
   .hero-title {
     font-size: 1.5rem;
