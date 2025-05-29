@@ -1,27 +1,57 @@
 import { useState } from 'react'
+import { FiMenu, FiX } from 'react-icons/fi';
 import HeroImage from './assets/HeroImage1.jpg';
 import StephanieImage from './assets/stephanie.jpg'; // optional image for story
 import './App.css'
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div>
-	<link rel="icon" type="image/png" href="/vite.svg" />
-      <header className="navbar">
-        <div className="navbar-inner">
+      {/* Favicon link - for <head>, not JSX body */}
+      {/* <link rel="icon" type="image/png" href="/vite.svg" /> */}
+
+      {/* Top Bar */}
+      <header className="top-bar">
+        <div className="top-bar-inner">
           <div className="logo">Dream and a Whisk</div>
-          <nav role="navigation" aria-label="Main navigation">
-            <ul className="nav-links">
-              <li><a className="active" href="#home">Home</a></li>
-              <li><a href="#news">Menu</a></li>
-              <li><a href="#contact">Order</a></li>
-              <li><a href="#about">Contact</a></li>
+
+          {/* Desktop Navigation */}
+          <nav className="desktop-nav">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#order">Order</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
+
+          {/* Mobile Hamburger */}
+          <button
+            className="menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+          </button>
         </div>
       </header>
 
-      <div className="hero-section">
+      {/* Fullscreen Mobile Nav */}
+      {menuOpen && (
+        <div className="full-nav">
+          <ul>
+            <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
+            <li><a href="#menu" onClick={() => setMenuOpen(false)}>Menu</a></li>
+            <li><a href="#order" onClick={() => setMenuOpen(false)}>Order</a></li>
+            <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+          </ul>
+        </div>
+      )}
+
+      {/* Hero Section */}
+      <div className="hero-section" id="home">
         <img src={HeroImage} alt="Bakery entrance" className="hero-image" />
         <div className="hero-overlay">
           <h1 className="hero-title">PRESENTATION IS EVERYTHING</h1>
@@ -29,6 +59,7 @@ function App() {
         </div>
       </div>
 
+      {/* Story Section */}
       <div className="story-section">
         <div className="story-grid">
           <img src={StephanieImage} alt="Stephanie baking" className="story-image" />
@@ -38,7 +69,6 @@ function App() {
             <p className="story-text">
               After more than a decade of creating show-stopping cakes from home, beloved local baker Stephanie Mendola opened the doors to her long-awaited storefront. <strong>Dream and a Whisk</strong>, a boutique bakery specializing in custom cakes, elegant treats, and gourmet desserts.
             </p>
-            {/* <button className="cta-button">Meet the Team</button> */}
           </div>
         </div>
       </div>
