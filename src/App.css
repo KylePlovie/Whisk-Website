@@ -17,6 +17,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  height:4.5rem;
   background-color: #fff9f3;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -34,10 +35,11 @@
 }
 
 .logo {
-  font-weight: bold;
-  color: #CDB87F;
-  font-size: 2.5rem;
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
   font-family: 'Brush Script MT', cursive;
+  color: #CDB87F;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .desktop-nav {
@@ -105,6 +107,7 @@
   height: 60vh;
   overflow: hidden;
   margin-top: 0rem;
+  padding-top: 4.5rem;
 }
 
 .hero-image {
@@ -128,6 +131,7 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  padding-top: 4.5rem;
 }
 
 .hero-subtitle {
@@ -228,7 +232,7 @@ body {
   }
   
   .logo {
-	  font-size: 1.5rem;
+	  font-size: clamp(1.5rem, 5vw, 2.5rem);
 	  white-space: nowrap;       /* Prevent breaks */
 	  overflow: hidden;          /* Optional safety */
 	  
@@ -240,6 +244,14 @@ body {
 
   .hero-subtitle {
     font-size: 1rem;
+  }
+  
+  .hero-section {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+  overflow: hidden;
+  margin-top: 0rem;
   }
 
   .story-grid {
